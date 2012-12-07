@@ -464,7 +464,7 @@ void register_ffmpeg_movie_class(int module_number)
     le_ffmpeg_pmovie = zend_register_list_destructors_ex(NULL, 
             _php_free_ffmpeg_pmovie, "ffmpeg_pmovie", module_number);
    
-    INIT_CLASS_ENTRY(ffmpeg_movie_class_entry, "ffmpeg_movie", 
+    INIT_NS_CLASS_ENTRY(ffmpeg_movie_class_entry, "ffmpeg", "Movie", 
             ffmpeg_movie_class_methods);
     
     /* register ffmpeg movie class */

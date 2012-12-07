@@ -187,7 +187,7 @@ void register_ffmpeg_frame_class(int module_number)
     le_ffmpeg_frame = zend_register_list_destructors_ex(_php_free_ffmpeg_frame,
             NULL, "ffmpeg_frame", module_number);
 
-    INIT_CLASS_ENTRY(ffmpeg_frame_class_entry, "ffmpeg_frame", 
+    INIT_NS_CLASS_ENTRY(ffmpeg_frame_class_entry, "ffmpeg", "Frame", 
             ffmpeg_frame_class_methods);
 
     /* register ffmpeg frame class */
